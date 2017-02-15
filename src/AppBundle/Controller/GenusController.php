@@ -5,15 +5,18 @@ namespace AppBundle\Controller;
 
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class GenusController
+class GenusController extends Controller
 {
     /**
-     * @Route("/genus")
+     * @Route("/genus/{genusName}")
      */
-    public function showAction()
+    public function showAction($genusName)
     {
-        return new Response('Under the sea!');
+        return $this->render('genus/show.html.twig', [
+            'name' => $genusName
+        ]);
     }
 }
