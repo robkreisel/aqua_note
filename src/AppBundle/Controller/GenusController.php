@@ -24,7 +24,7 @@ class GenusController extends Controller
 
     /**
      * @param $genusName string
-     * @Route("/genus/{genusName}/notes")
+     * @Route("/genus/{genusName}/notes", name="genus_show_notes")
      * @Method("GET")
      * @return Response
      */
